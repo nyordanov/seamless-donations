@@ -103,7 +103,7 @@ jQuery(document).ready(function () {
     jQuery("form").on("change", "select", function () {
         var nameOfChangedSelect = jQuery(this).attr("name");
         console.log("select change (invoked):" + nameOfChangedSelect);
-        jQuery("select[name=" + nameOfChangedSelect + "] option:selected").each(function () {
+        jQuery("select[name='" + nameOfChangedSelect + "'] option:selected").each(function () {
             // triggering for everything, not just visible items
             var parent = jQuery(this).parent("select").attr("name");
             console.log("-- option:selected (parent select): " + parent);
